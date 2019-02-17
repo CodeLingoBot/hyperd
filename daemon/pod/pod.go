@@ -84,13 +84,13 @@ type XPod struct {
 
 // The Log infrastructure, to add pod name as prefix of the log message.
 
-// LogPrefix() belongs to the interface `github.com/hyperhq/hypercontainer-utils/hlog.LogOwner`, which helps `hlog.HLog` get
+// LogPrefix: belongs to the interface `github.com/hyperhq/hypercontainer-utils/hlog.LogOwner`, which helps `hlog.HLog` get
 // proper prefix from the owner object.
 func (p *XPod) LogPrefix() string {
 	return p.logPrefix
 }
 
-// Log() employ `github.com/hyperhq/hypercontainer-utils/hlog.HLog` to add pod information to the log
+// Log: Log employ `github.com/hyperhq/hypercontainer-utils/hlog.HLog` to add pod information to the log
 func (p *XPod) Log(level hlog.LogLevel, args ...interface{}) {
 	hlog.HLog(level, p, 1, args...)
 }
@@ -111,7 +111,7 @@ func (p *XPod) SandboxNameLocked() string {
 	return sbn
 }
 
-// SandboxName() returns the id of the sandbox, the detail of sandbox should be wrapped inside XPod, this method is
+// SandboxName returns the id of the sandbox, the detail of sandbox should be wrapped inside XPod, this method is
 // used for list/display only.
 func (p *XPod) SandboxName() string {
 	p.statusLock.RLock()

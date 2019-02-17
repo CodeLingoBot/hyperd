@@ -11,7 +11,7 @@ import (
 	gflag "github.com/jessevdk/go-flags"
 )
 
-// CmdPush pushes an image or repository to the registry.
+// HyperCmdPush: pushes an image or repository to the registry.
 //
 // Usage: hyperctl push NAME[:TAG]
 func (cli *HyperClient) HyperCmdPush(args ...string) error {

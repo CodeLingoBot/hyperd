@@ -9,7 +9,7 @@ import (
 	gflag "github.com/jessevdk/go-flags"
 )
 
-// we need this *info* function to get the whole status from the hyper daemon
+// HyperCmdInfo: we need this *info* function to get the whole status from the hyper daemon
 func (cli *HyperClient) HyperCmdInfo(args ...string) error {
 	var parser = gflag.NewParser(nil, gflag.Default)
 	parser.Usage = "info\n\nDisplay system-wide information"

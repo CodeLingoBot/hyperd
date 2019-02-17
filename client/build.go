@@ -21,7 +21,7 @@ import (
 	gflag "github.com/jessevdk/go-flags"
 )
 
-// hyperctl build [OPTIONS] PATH
+// HyperCmdBuild: hyperctl build [OPTIONS] PATH
 func (cli *HyperClient) HyperCmdBuild(args ...string) error {
 	var opts struct {
 		ImageName      string `long:"tag" short:"t" default:"" value-name:"\"\"" default-mask:"-" description:"Repository name (and optionally a tag) to be applied to the resulting image in case of success"`

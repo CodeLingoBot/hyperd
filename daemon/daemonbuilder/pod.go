@@ -206,7 +206,7 @@ func (d Docker) ContainerWait(cId string, timeout time.Duration) (int, error) {
 	return code, err
 }
 
-// Override the Docker ContainerCreate interface, create pod to run command
+// ContainerCreate: Override the Docker ContainerCreate interface, create pod to run command
 func (d Docker) ContainerCreate(params types.ContainerCreateConfig) (types.ContainerCreateResponse, error) {
 	var spec *apitypes.UserPod
 	var err error

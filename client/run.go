@@ -13,7 +13,7 @@ import (
 	"github.com/hyperhq/runv/lib/term"
 )
 
-// hyperctl run [OPTIONS] image [COMMAND] [ARGS...]
+// HyperCmdRun: hyperctl run [OPTIONS] image [COMMAND] [ARGS...]
 func (cli *HyperClient) HyperCmdRun(args ...string) error {
 	var (
 		parser *gflag.Parser

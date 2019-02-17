@@ -237,7 +237,7 @@ func (p *XPod) ContainerStart(cid string) error {
 	return p.saveSandbox()
 }
 
-// Start() means start a STOPPED pod.
+// Start starts means start a STOPPED pod.
 func (p *XPod) Start() error {
 
 	if p.IsStopped() {

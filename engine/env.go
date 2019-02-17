@@ -99,7 +99,7 @@ func (env *Env) SetInt64(key string, value int64) {
 	env.Set(key, fmt.Sprintf("%d", value))
 }
 
-// Returns nil if key not found
+// GetList returns nil if key not found
 func (env *Env) GetList(key string) []string {
 	sval := env.Get(key)
 	if sval == "" {
@@ -181,7 +181,7 @@ func (decoder *Decoder) Decode() (*Env, error) {
 	return env, nil
 }
 
-// DecodeEnv decodes `src` as a json dictionary, and adds
+// Decode decodes decodes `src` as a json dictionary, and adds
 // each decoded key-value pair to the environment.
 //
 // If `src` cannot be decoded as a json dictionary, an error

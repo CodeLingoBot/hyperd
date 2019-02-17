@@ -109,7 +109,7 @@ func (c *Container) updateLogPrefix() {
 	}
 }
 
-// Container Info:
+// Id: Container Info:
 func (c *Container) Id() string {
 	return c.spec.Id
 }
@@ -227,7 +227,7 @@ func (c *Container) InfoStatus() *apitypes.ContainerStatus {
 	return s
 }
 
-// Container life cycle operations:
+// Add: Container life cycle operations:
 func (c *Container) Add() error {
 	return nil
 }
@@ -290,7 +290,7 @@ func (c *Container) attach(stdin io.ReadCloser, stdout io.WriteCloser, rsp chan<
 	return nil
 }
 
-// Container status
+// CurrentState: Container status
 func (c *Container) CurrentState() ContainerState {
 	c.status.RLock()
 	current := c.status.State
@@ -1192,7 +1192,7 @@ func (c *Container) removeFromEngine() error {
 	return c.p.factory.engine.ContainerRm(c.Id(), &dockertypes.ContainerRmConfig{})
 }
 
-// container status transition
+// Create: container status transition
 func (cs *ContainerStatus) Create() error {
 	cs.Lock()
 	defer cs.Unlock()

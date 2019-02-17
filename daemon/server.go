@@ -302,7 +302,7 @@ func (daemon *Daemon) CmdCleanPod(podId string) (*engine.Env, error) {
 	return v, nil
 }
 
-// pod level port mappings API
+// CmdListPortMappings: pod level port mappings API
 func (daemon *Daemon) CmdListPortMappings(podId string) (*engine.Env, error) {
 	p, ok := daemon.PodList.Get(podId)
 	if !ok {

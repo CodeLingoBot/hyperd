@@ -13,7 +13,7 @@ import (
 	apitypes "github.com/hyperhq/hyperd/types"
 )
 
-// MigrateLagecyData migrate lagecy persistence data to current layout.
+// MigrateLagecyPersistentData: migrate lagecy persistence data to current layout.
 func MigrateLagecyPersistentData(db *daemondb.DaemonDB, podFactory func() *PodFactory) (err error) {
 	num := 0
 	count := 0

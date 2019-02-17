@@ -25,7 +25,7 @@ type jsonMetadata struct {
 	Initialized    bool `json:"initialized"`
 }
 
-// For device mapper, we do not need to mount the container to sharedDir.
+// MountContainerToSharedDir: For device mapper, we do not need to mount the container to sharedDir.
 // All of we need to provide the block device name of container.
 func MountContainerToSharedDir(containerId, sharedDir, devPrefix string) (string, error) {
 	devFullName := fmt.Sprintf("/dev/mapper/%s-%s", devPrefix, containerId)
@@ -291,7 +291,7 @@ func DeleteVolume(dm *DeviceMapper, dev_id int) error {
 	return nil
 }
 
-// Delete the pool which is created in 'Init' function
+// DMCleanup: Delete the pool which is created in 'Init' function
 func DMCleanup(dm *DeviceMapper) error {
 	var parms string
 	// Delete the thin pool for test

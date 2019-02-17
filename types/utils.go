@@ -22,7 +22,7 @@ func (p *UserPod) LookupContainer(idOrName string) *UserContainer {
 	return nil
 }
 
-// CloneGlobalPart() clone the static part of a pod spec, and leave the remains
+// CloneGlobalPart: clone the static part of a pod spec, and leave the remains
 // empty.
 func (p *UserPod) CloneGlobalPart() *UserPod {
 	return &UserPod{

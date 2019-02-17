@@ -58,7 +58,7 @@ func initCheck() error {
 	return nil
 }
 
-// Check if a dnat rule exists
+// OperatePortMap checks if a dnat rule exists
 func OperatePortMap(action Action, chain string, rule []string) error {
 	if output, err := Raw(append([]string{
 		"-t", string(Nat), string(action), chain}, rule...)...); err != nil {
@@ -138,7 +138,7 @@ func PortMapUsed(chain string, proto string, begin, end int) bool {
 	return false
 }
 
-// Check if a rule exists
+// Exists checks if a rule exists
 func Exists(table Table, chain string, rule ...string) bool {
 	if string(table) == "" {
 		table = Filter
@@ -169,7 +169,7 @@ func Exists(table Table, chain string, rule ...string) bool {
 	)
 }
 
-// Call 'iptables' system command, passing supplied arguments
+// Raw: Call 'iptables' system command, passing supplied arguments
 func Raw(args ...string) ([]byte, error) {
 	if err := initCheck(); err != nil {
 		return nil, err

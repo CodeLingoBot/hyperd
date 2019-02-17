@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// For device mapper, we do not need to mount the container to sharedDir.
+// MountContainerToSharedDir: For device mapper, we do not need to mount the container to sharedDir.
 // All of we need to provide the block device name of container.
 func MountContainerToSharedDir(containerId, sharedDir, devPrefix string) (string, error) {
 	return "", nil

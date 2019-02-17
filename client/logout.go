@@ -9,7 +9,7 @@ import (
 	gflag "github.com/jessevdk/go-flags"
 )
 
-// CmdLogout logs a user out from a Docker registry.
+// HyperCmdLogout: logs a user out from a Docker registry.
 //
 // If no server is specified, the user will be logged out from the registry's index server.
 //

@@ -14,7 +14,7 @@ import (
 	gflag "github.com/jessevdk/go-flags"
 )
 
-// CmdLogin logs in or registers a user to a Docker registry service.
+// HyperCmdLogin: logs in or registers a user to a Docker registry service.
 //
 // If no server is specified, the user will be logged into or registered to the registry's index server.
 //

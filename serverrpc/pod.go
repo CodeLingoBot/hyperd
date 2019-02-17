@@ -90,7 +90,7 @@ func (s *ServerRPC) PodUnpause(ctx context.Context, req *types.PodUnpauseRequest
 	return &types.PodUnpauseResponse{}, nil
 }
 
-// PodLabels sets the labels of Pod
+// SetPodLabels: sets the labels of Pod
 func (s *ServerRPC) SetPodLabels(c context.Context, req *types.PodLabelsRequest) (*types.PodLabelsResponse, error) {
 	err := s.daemon.SetPodLabels(req.PodID, req.Override, req.Labels)
 	if err != nil {

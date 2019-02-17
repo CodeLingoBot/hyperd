@@ -65,13 +65,13 @@ func NewServerRPC(d *daemon.Daemon) *ServerRPC {
 	return s
 }
 
-// LogPrefix() belongs to the interface `github.com/hyperhq/hypercontainer-utils/hlog.LogOwner`, which helps `hlog.HLog` get
+// LogPrefix: belongs to the interface `github.com/hyperhq/hypercontainer-utils/hlog.LogOwner`, which helps `hlog.HLog` get
 // proper prefix from the owner object.
 func (s *ServerRPC) LogPrefix() string {
 	return "[gRPC] "
 }
 
-// Log() employ `github.com/hyperhq/hypercontainer-utils/hlog.HLog` to add pod information to the log
+// Log: Log employ `github.com/hyperhq/hypercontainer-utils/hlog.HLog` to add pod information to the log
 func (s *ServerRPC) Log(level hlog.LogLevel, args ...interface{}) {
 	hlog.HLog(level, s, 1, args...)
 }
